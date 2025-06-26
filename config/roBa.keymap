@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     flavor = "balanced";
@@ -61,10 +62,10 @@
 
         BASE {
             bindings = <
-&kp Q        &kp W           &kp F         &kp P                        &kp B                                                          &kp Y        &kp U  &lt 0 I    &kp O    &kp P
-&kp A        &mt LEFT_ALT R  &mt LCTRL S   &mt LEFT_SHIFT T             &kp G        &kp C_VOLUME_UP                    &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LC(Z) Z  &mt LC(X) X     &mt LC(C) C   &kp D                        &mt LS(V) V  &kp K_VOLUME_DOWN                  &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL    &kp LEFT_WIN    &kp LEFT_ALT  &lt_to_layer_0 0 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q        &kp W           &kp F        &kp P             &kp B                                                  &kp J        &kp L         &kp U        &kp Y            &kp SEMICOLON
+&kp A        &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G            &kp C_VOLUME_UP        &kp M          &kp M        &mt RSHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &kp O
+&mt LC(Z) Z  &mt LC(X) X     &mt LC(C) C  &kp D             &mt LS(V) V      &kp C_VOLUME_DOWN      &kp SEMICOLON  &kp K        &kp H         &kp COMMA    &kp DOT          &kp SLASH
+&kp ESCAPE   &kp LEFT_ALT    &kp LCTRL    &mt LGUI DEL      &lt 1 BACKSPACE  &kp RET                &lt 2 SPACE    &lt 1 ENTER                                              &kp BACKSLASH
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -72,10 +73,10 @@
 
         NAVI {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&kp CAPS    &kp PAGE_UP  &kp UP     &kp PAGE_DOWN  &kp LEFT_BRACE                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&caps_word  &kp LEFT     &kp DOWN   &kp RIGHT      &kp LBKT        &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp DELETE  &mkp LCLK    &mkp MCLK  &mkp RCLK      &kp LPAR        &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans      &trans       &trans     &trans         &trans          &trans      &trans   &trans                          &kp F12
             >;
         };
 
